@@ -1,0 +1,117 @@
+<view class="banner">
+  <!-- <image class="g10 vm banner" mode="widthFix" src="../../images/test.jpg"></image> -->
+  <swiper indicator-dots="{{indicatorDots}}" linear
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image g10 vm" mode="widthFix"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<view class="video-box g10 hide">
+  <video class="g10 vm hide" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/com_hsuanhuI_service/video/%E6%AD%A6%E6%B1%89%E5%AE%A3%E6%80%800705%E5%AE%8C%E6%95%B4%E7%89%88s.mp4"></video>
+</view>
+
+<view class="content">
+  <view class="form-box">
+    <view class="title tc">
+      <view class="h1">0元领原价1599元科学大礼包！</view>
+      <text class="tips">（名额有限，仅限前100名）</text>
+    </view>
+    
+    <view class="form-con">
+      <view class="input-box">
+        <input class="name" bindinput="bindInput" data-item="name" placeholder="孩子姓名" placeholder-style="color:rgba(255,255,255,0.4)" value="{{user.name}}"></input>
+      </view>
+
+      <view class="input-box">
+        <!-- <picker mode="date" value="{{birthday}}" bindchange="dateChange">
+          <view class="picker">
+            <input class="name" placeholder="出生年月" value="{{birthday}}"></input>
+          </view>
+        </picker> -->
+        <input class="age" bindinput="bindInput" data-item="age" placeholder="孩子年龄" placeholder-style="color:rgba(255,255,255,0.4)" value="{{user.age}}"></input>
+      </view>
+
+      <view class="input-box phone-box">
+        <input class="phone" disabled="{{true}}" bindinput="bindInput" maxlength="11" data-item="phone" placeholder="手机号码" placeholder-style="color:rgba(255,255,255,0.4)" value="{{phone}}" type="tel"></input>
+        <button class="authority" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信号授权</button>
+      </view>
+
+      <view class="input-box">
+        <picker bindchange="sectionChange" value="{{index}}" range="{{array}}" range-key="organization_name">
+          <view class="picker">
+            <input class="learning" bindinput="bindInput" disabled="{{true}}" data-item="learning" placeholder="学习中心" placeholder-style="color:rgba(255,255,255,0.4)" value="{{array[index].organization_name}}"></input>
+          </view>
+        </picker>
+      </view>
+
+
+    </view>
+
+    <view class="btn tc" bindtap="submitInfo">立即领取</view>
+
+    <view class="remark">
+      <view class="p1">您的孩子将免费获得</view>
+    </view>
+  </view>
+
+  <view class="info-box">
+    <view class="txt">
+      <text class="txt-title tc">为什么要让孩子上科学课？</text>
+      <text class="txt-body">
+      科学是培养孩子逻辑思维和创造力的最佳学科。科学学习是一个不断提出“为什么”——大胆思考——实践验证的探索创造过程。科学学习不仅能让孩子学到科学知识，更能让孩子在逻辑思考、实验创造中认识世界。 
+      \n 深入事物逻辑的科学学习，也帮助孩子实现对各学科的深层次理解，在各方面取得更好的成绩。
+      </text>
+    </view>
+
+    <view class="pic-box">
+      <text class="txt-title tc">我们的国际科学课程</text>
+      <view class="lesson-con">
+        <view class="lesson-list" wx:for="{{lessonGroup}}" wx:key="{{index}}">
+          <view class="chart">
+            <image mode="widthFix" class="vm g10 pic-list" src="{{item.url}}"></image>
+          </view>
+          <view class="lesson-txt">
+            <view class="lesson-title">{{item.title}}</view>
+            <text class="lesson-body block">{{item.txt1}}</text>
+            <text class="lesson-body block">{{item.txt2}}</text>
+            <text class="lesson-body block">{{item.txt3}}</text>
+          </view>
+          
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+    <view class="aboutus">
+      <view class="txt">
+        <text class="txt-title tc">关于宣怀教育</text>
+        <text class="txt-body">
+          宣怀教育是一家致力于青少儿国际科学人才培养的教育机构。在STEAM教育理念指导下，宣怀教育构建了完整的国际科学教育课程体系，将青少儿培养成能够发现和解决新问题、开发新知识、创造新价值的未来卓越人才，使他们既能成功完成当前的升学目标，又能在未来的社会环境中脱颖而出。
+        </text>
+      </view>
+
+      <view class="coop">
+        <text class="txt-title tc">全球知名合作伙伴</text>
+        <view class="coop-con clearfix">
+          <view class="coop-list" wx:for="{{coopGroup}}" wx:key="{{index}}">
+            <image mode="widthFix" class="vm g10" src="{{item.url}}"></image>  
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+
+<bottom></bottom>
+
+<view class="fixed">
+  <view class="txt">免费领取1599元大礼包！</view>
+  <view class="img-box">
+    <image class="vm g10" mode="widthFix" src="http://elite-league.oss-cn-shanghai.aliyuncs.com/mini/gift.png"></image>
+  </view>
+  <view class="get" bindtap="getGift">立即领取</view>
+</view>

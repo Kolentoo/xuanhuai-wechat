@@ -1,0 +1,60 @@
+<official-account></official-account>
+<view class="{{draw?'all':''}}">
+<view class="top">
+  <view class="notice tc">
+    <view class="p1">申请成功!</view>
+    <view class="p2">我们的课程顾问将尽快与您联系!</view>
+  </view>
+
+  <view class="btn-group">
+    <button open-type="share" class="share btn">推荐给好友</button>
+  </view>
+</view>
+
+
+
+<view class="content">
+  <view class="title tc">您还有1份礼品待领取!</view>
+  <image mode="aspectFit" src="../../images/test.jpg" class="gift vm g10"></image>
+
+  <button class="share-btn" open-type="getUserInfo" bindgetuserinfo='getUser'>立即分享，领取好礼</button>
+
+  <view class="help tc">
+    <view class="help-title">如何领取?</view>
+    <text class="help-body">点击按钮＞保存图片＞分享朋友圈＞至门店领取礼品</text>
+  </view>
+</view>
+
+<view class="bottom"> 
+  <image mode="aspectFit" class="g10 vm" src="../../images/bj3.png"></image>
+</view>
+
+<view class="pop" wx:if="{{share}}">
+  <view class="mask" bindtap="closePop"></view>
+  <view class="box" bindtap="closePop">
+    
+      <view class="share-pic hide">
+        <view class="info-box">
+          <view class="avatar">
+            <image class="g10 vm" src="{{userInfo.avatarUrl}}"></image>
+          </view>
+          <text class="nickname">{{userInfo.nickName}}</text>
+        </view>
+
+        <view class="code">
+          <image class="g10 vm" src="{{codeUrl}}"></image>
+        </view>
+      </view>
+
+      <canvas class="pic" canvas-id='myCanvas' style='padding: 0;display:block;'></canvas>
+
+    <view class="save-btn" catchtap="saveImage">保存分享图</view>
+    <view class="tips tc hide">分享到朋友圈，即可领取****一份！（仅50份，先到先得）</view>
+  </view>
+</view>
+
+</view>
+
+
+ 
+

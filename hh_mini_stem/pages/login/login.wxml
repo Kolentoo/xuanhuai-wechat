@@ -1,0 +1,7 @@
+<view class="login">
+  <view class="logo">
+    <image mode="aspectFit" class="vm g10" src="../../images/logo.png"></image>
+  </view>
+  
+  <button open-type="getUserInfo" class="login-btn" bindtap="getInfo">微信登录</button>
+</view>

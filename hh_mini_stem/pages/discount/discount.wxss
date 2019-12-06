@@ -1,0 +1,98 @@
+/* pages/discount/discount.wxss */
+.banner {z-index:5;}
+swiper {height:888rpx;}
+
+.bj1 {background:url('https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/disbj1.png') no-repeat center center;
+height: 868rpx;background-size:cover;margin-top:-14rpx;position:relative;z-index:300;}
+.getinfo {padding-top:570rpx;}
+.authority {width:80%;margin:0 auto;background: url('https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/disbtn.png') no-repeat center center;background-size:100%;height: 148rpx;}
+.fixed {position:fixed;bottom:-10px;left:10%;width: 80%;}
+button::after {opacity: 0;}
+
+.info {background: #fff;padding:100rpx 50rpx;}
+.info .title {font-size:38rpx;color:#2b2b2b;padding-bottom:40rpx;font-weight: bold;}
+.info .article {font-size:24rpx;color:#2b2b2b;padding-top:30rpx;line-height: 40rpx;}
+.info .author {font-size:24rpx;color:#2b2b2b;margin-top:50rpx;}
+.info .author .a1 {text-align: right;line-height: 40rpx;}
+
+.lesson {background:#f7f7f7;padding:60rpx 0;}
+.lesson .txt-box {padding:0 50rpx;}
+.lesson .title {font-size:38rpx;color:#2b2b2b;padding-bottom:40rpx;font-weight: bold}
+.lesson .txt {font-size:24rpx;color:#2b2b2b;line-height: 40rpx;}
+
+.lesson .pic-group {padding:0 50rpx;}
+.lesson .pic-list {margin-top:50rpx;}
+.lesson .pic-list .chart {width:100%;border-radius:15rpx;overflow:hidden;}
+.lesson .pic-list .detail {width:100%;}
+.lesson .pic-list .detail .title {font-size:32rpx;color:#9e1b1d;padding-bottom:15rpx;padding-top:50rpx;}
+.lesson .pic-list .detail .list {font-size:24rpx;color:#2b2b2b;line-height: 40rpx;}
+.lesson .pic-list .detail .point {font-size:24rpx;color:#9e1b1d;line-height: 40rpx;font-weight: bold;}
+.lesson .important {color:#008b9d;}
+.infobj {margin-top:90rpx;}
+
+.aboutus {background:url('https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/disbj3.jpg') no-repeat center center;
+height: 686rpx;background-size:cover;}
+
+.coop {background:url('https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/disbj4.jpg') no-repeat center center;
+height: 604rpx;background-size:cover;}
+
+.aboutus .txt {font-size:24rpx;color:#fff;padding:300rpx 40rpx 0;line-height: 40rpx;}
+.coop-con {padding:200rpx 40rpx 0;}
+.coop-list {width:45%;margin:0 2.5% 30rpx;}
+
+.pop {position:fixed;width:100%;height: 100%;left:0;top:0;z-index:1000;display:flex;justify-content: center;
+align-items: center;}
+.pop .title {font-size:40rpx;padding-bottom:40rpx;}
+.pop-con {background:#fff;border-radius:30rpx;width: 70%;padding:60rpx 40rpx;position: relative;}
+.pop .input-box {position:relative;margin-bottom:20rpx;}
+.pop .input-box input{height:88rpx;line-height:88rpx;color:#333;border:1px solid #989898;border-radius:10rpx;
+padding-left: 20rpx;font-size:24rpx;}
+.pop .getcode {color:#9e1b1d;font-size:24rpx;position:absolute;left: 50%;top: 12rpx;height: 70rpx;line-height: 70rpx;
+width: 50%;text-align: center;border-left: 1rpx solid #e1e1e1;z-index:100;}
+.mask {background: rgba(0,0,0,0.5);width: 100%;height: 100%;position:fixed;top: 0;left: 0;z-index:999;}
+
+.submitinfo {width: 70%;background:#9e1b1d;color:#fff;text-align: center;height: 88rpx;line-height: 88rpx;
+margin:50rpx auto 0;}
+.close-btn {width: 30rpx;height: 30rpx;position: absolute;top:34rpx;right:34rpx;}
+.pop .tips {margin-top:40rpx;text-align: center;display: flex;justify-content: center;align-items: center;}
+.pop .tips checkbox {width:20rpx;height: 20rpx;display: flex;justify-content: center;align-items: center;}
+.pop .tips checkbox .wx-checkbox-input {width: 20rpx;height: 20rpx;}
+.pop checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {width: 20rpx;height: 20rpx;
+  line-height: 20rpx;text-align: center;font-size: 22rpx;
+  background: transparent;transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);}
+.pop .tips .inner {font-size:24rpx;color:#818181;margin-left:10rpx;}
+.pop .inner .txt {font-size:24rpx;color:#9e1b1d;}
+.pop .time {color: #818181;font-size: 24rpx;position: absolute;left: 50%;top: 12rpx;height: 70rpx;line-height: 70rpx;
+width: 50%;text-align: center;border-left: 1rpx solid #e1e1e1;z-index: 100;}
+
+navigator  {margin-top:-8rpx;}
+
+.pop-info {position:fixed;width:100%;height: 100%;left:0;top:0;z-index:1001;display:flex;justify-content: center;
+align-items: center;}
+.pop-info .title {font-size:40rpx;margin-bottom:40rpx;}
+.pop-info .input-box {margin-bottom:35rpx;position:relative;}
+.pop-info .input-box .label {font-size:24rpx;margin-right:40rpx;color:#666;}
+.pop-info .input-box {border-bottom:1rpx solid #9e1b1d;height: 80rpx;line-height: 80rpx;}
+.pop-info .input-box input {height: 80rpx;line-height: 80rpx;font-size:24rpx;}
+.pop-info .picker {font-size:24rpx;}
+.pop-info .sex-box {display:flex;align-items: center;height: 80rpx;}
+.pop-info .sex {display:flex;align-items: center;height: 80rpx;justify-content: space-between;margin:0 30rpx;}
+.pop-info .sex-group {display:flex;justify-content: space-between;align-items: center;}
+.pop-info .sex-group .sex {width: 115rpx;height:80rpx;}
+.pop-info .label {font-size:24rpx;margin-right:40rpx;color:#666;line-height: 80rpx;}
+.pop-info .submit {height: 80rpx;background: #9e1b1d;color:#fff;text-align: center;font-size:34rpx;
+border-radius:50rpx;line-height: 80rpx;margin-top:60rpx;box-shadow: 9rpx 3rpx 15rpx #9e1b1d;}
+.pop-info .closeMore {width: 30rpx;height: 30rpx;position: absolute;top:34rpx;right:34rpx;}
+.pop-info .picker .label {width: 100%;}
+.pop-info .picker .inner {position:absolute;left: 138rpx;top: 0rpx;}
+
+.school-box {background: #fafafa;padding:80rpx 50rpx;}
+.school-box .title1 {color:#2b2b2b;font-weight: bold;font-size:38rpx;}
+.school-box .title2 {color:#2b2b2b;font-size:28rpx;margin-top:10rpx;}
+.school-list {box-shadow:0 10px 10px rgba(35,35,35,0.1);margin-top:80rpx;padding-bottom:10rpx;}
+.school-detail {padding:20rpx;}
+.school-name {font-size:32rpx;color:#2b2b2b;font-weight:bold;padding:10rpx 0;}
+.school-address {font-size:24rpx;color:#2b2b2b;padding-top:10rpx;display:flex;}
+.school-address .s1 {width: 78rpx;}
+.school-phone {font-size:24rpx;color:#2b2b2b;padding-top:10rpx;}

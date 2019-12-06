@@ -1,0 +1,58 @@
+page {padding-bottom:100rpx;}
+swiper {height: 450rpx;}
+.video-box {overflow: hidden;}
+
+.form-box {background: url('http://elite-league.oss-cn-shanghai.aliyuncs.com/mini/bj4.png') no-repeat center center;background-size:cover;height: 1378rpx;}
+
+.content {width:100%;}  
+.form-box {position: relative;}
+.form-box .title {color:#fff;padding-top:30px;}
+.form-box .title .h1 {font-size:24px;}
+.form-box .title .h2 {font-size:28px;margin-bottom:10px;}
+.form-box .title .tips {font-size:16px;}
+
+.form-con {width:78%;margin:30px auto 0;}
+.input-box {margin-bottom:15px;}
+.input-box input{background:rgba(255,255,255,0.4);border-radius:2px;width:95%;height:40px;line-height: 40px;
+color:#fff;font-size:14px;padding-left:5%;}
+.phone-box {position:relative;}
+.phone-box .authority {color:#fff;font-size:14px;position:absolute;line-height: 26px;padding:0 20px;
+top:7px;right:0;border-left:1rpx solid #fff;background: none;border-radius:0;z-index:30;}
+button::after{display:none}
+
+.lesson-list {display: flex;justify-content: space-between;align-items: center;margin-bottom:15px;}
+.lesson-list .chart {width: 45%;}
+.lesson-list .lesson-txt {width: 50%;margin-left:5%;}
+.lesson-txt .lesson-title {font-size:14px;margin-bottom:5px;font-weight: bold;}
+.lesson-txt .lesson-body {font-size: 12px;}
+
+.coop-con {margin-top:40px;}
+.coop-list {width:47%;margin-bottom:20px;}
+.coop-list:nth-child(n) {float:left}
+.coop-list:nth-child(2n) {float:right}
+
+.btn {color:#fff;font-size:14px;height: 42px;line-height:42px;background: #F39E52;
+box-shadow:0px 3px 10px rgba(243,158,82,0.1);border-radius:21px;margin:30px auto 0;width:78%;}
+.remark {position:absolute;color:#fff;left:0%;bottom:415rpx;text-align: center;width:100%;}
+.remark .p1 {font-size:16px;margin-bottom:10px;}
+.remark .p2 {font-size:12px;}
+
+.fixed {position: fixed;bottom:0;left:0;width: 100%;background:#fff;
+justify-content: space-between;display:flex;align-items: center;height: 100rpx;z-index:100;}
+.fixed .txt {font-size:12px;color:#F05D67;margin-left:10px;}
+.fixed .img-box {width: 42px;margin-right:20rpx;}
+.fixed .get {margin-right:10px;width:40%;background:rgba(243,158,82,1);text-align: center;
+border-radius:16px;color:#fff;height: 64rpx;line-height: 64rpx;font-size:14px;}
+
+.info-box {padding:0 25px;}
+.txt-title {width:100%;color:#8E2A2A;font-size:22px;display:block;font-weight: bold;}
+.txt-body {color:#231815;font-size:14px;line-height: 22px;}
+.pic-box {margin-top:50px;}
+.pic-box .txt-title {margin-bottom:30px;}
+.pic-list {margin-bottom:6px;}
+
+.aboutus {background: #8E2A2A;padding:50px 25px;}
+.aboutus .txt-title {color:#fff;}
+.aboutus .txt text{color:#fff;}
+.aboutus .coop {margin-top:50px;}
+.aboutus .pic-coop {margin-top:20px;}

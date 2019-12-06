@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "宣怀教育",
+  "usingComponents": {
+    "bottom": "../../components/bottom/bottom"
+  }
+}

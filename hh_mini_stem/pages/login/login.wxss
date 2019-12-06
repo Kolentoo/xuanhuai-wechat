@@ -1,0 +1,5 @@
+.login {position:relative;height: 100vh;}
+.logo {width: 76%;margin:0 auto 0;}
+
+.login .login-btn {background:rgba(142,42,42,1);border-radius:25px;height: 44px;line-height: 44px;
+text-align: center;color:#fff;font-size: 14px;position:absolute;width: 80%;bottom:40px;left:10%;}

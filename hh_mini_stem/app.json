@@ -1,0 +1,28 @@
+{
+  "pages": [
+    
+    "pages/discount/discount",
+    "pages/demo/demo",
+    "pages/finish/finish",
+    "pages/agree/agree",
+    "pages/home/home",
+    "pages/success/success",
+    "pages/index/index",
+    "pages/logs/logs",
+    "components/bottom/bottom",
+    "components/wx-index-list/wx-index-list"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "宣怀教育",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

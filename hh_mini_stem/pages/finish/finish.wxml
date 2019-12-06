@@ -1,0 +1,26 @@
+
+<official-account class="comp"></official-account>
+<view class="finish">
+
+  <view class="box">
+    <view class="success">
+      <image mode="aspectFit" class="vm bingo" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/bingo.png"></image>
+      <view class="result tc">领取成功</view>
+
+      <view class="detail tc">
+        <view class="p1">您的专属课程顾问</view>
+        <view class="p1">将在1个工作日内与您取得联系</view>
+        <view class="p1">请保持手机通畅</view>
+      </view>
+
+      <view class="tips tc hide">
+        <view class="p2">关注我们</view>
+        <view class="p3">获取更多课程咨询与服务</view>
+      </view>
+
+      <view class="btn-group">
+        <button open-type="share" class="share btn">推荐给好友</button>
+      </view>
+    </view>
+  </view>
+</view>

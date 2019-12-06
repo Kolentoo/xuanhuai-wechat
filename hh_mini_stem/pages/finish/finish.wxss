@@ -1,0 +1,20 @@
+.finish {background:url('https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/disbj5.jpg') no-repeat center center;
+height:100vh;background-size:cover;
+/* display:flex;justify-content: center;align-items: center; */
+}
+
+.box {padding-top:40%;width:80%;margin:0 auto;}
+/* .box {width:80%;margin-top:-10%;} */
+.success .bingo {width:180rpx;height: 180rpx;position: absolute;top: -50rpx;left:50%;margin-left:-90rpx;}
+.success {background: #fff;width:100%;margin:0 auto;border-radius:20rpx;padding:180rpx 0 60rpx 0;position: relative;}
+.success .result {color:#3d3d3d;font-size:40rpx;padding-bottom:30rpx;}
+.success .detail .p1 {color:#3d3d3d;font-size:28rpx;line-height: 40rpx;}
+
+.success .tips {margin-top:60rpx;}
+.success .tips .p2 {font-size:30rpx;color:#9e1b1d;}
+.success .tips .p3 {font-size:24rpx;color:#9a9a9a;}
+
+.btn-group .btn {width:70%;height: 80rpx;border-radius:50rpx;text-align: center;background:#9e1b1d;
+color:#fff;font-size:30rpx;line-height: 80rpx;margin-top:30rpx;}
+
+.comp {position: fixed;top: 0;left: 0;width: 100%;}

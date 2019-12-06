@@ -1,0 +1,237 @@
+<view class="banner">
+  <!-- <image class="g10 vm banner" mode="widthFix" src="../../images/test.jpg"></image> -->
+  <swiper indicator-dots="{{indicatorDots}}" linear
+    autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" linear duration="{{duration}}" indicator-dots>
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image g10 vm" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+</view>
+
+<view class="content">
+  <view class="bj1">
+    <view class="getinfo">
+      <button class="authority" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+      <button class="authority {{fixed?'fixed':'hide'}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    </view>
+  </view>
+
+  <view class="info1 info">
+    <view class="title tc">为什么孩子要上科学课？</view>
+    <view class="pic">
+      <image class="g10 vm" mode="widthFix" src="http://elite-league.oss-cn-shanghai.aliyuncs.com/mini/dispic1.jpg"></image>
+    </view>
+    <view class="article">
+    想要在变化如此快速的世界上蓬勃发展，创造性地思考和行动的能力变得前所未有的重要。一个创造型思考者会不断地为自己和生活的地方创造出新的可能性，这不仅可以带来经济回报，而且可以带来快乐、充实感、目标感和意义。孩子们理应得到这些。
+    </view>
+    <view class="author">
+      <view class="a1">----米切尔·雷斯尼克</view>
+      <view class="a1">少儿编程之父、麻省理工大学教授</view>
+    </view>
+  </view>
+
+  <view class="lesson">
+    <view class="txt-box">
+      <view class="title tc b">我们的国际科学课程</view>
+      <view class="txt">
+       宣怀国际科学课程为创造力而生，汇聚顶级国内国际教育资源，与国际接轨的课程内容，加上探索式的学习过程，让孩子在快乐学习中提升未来素养，能力与知识并行成长！
+      </view>
+    </view>
+
+    <view class="pic-group">
+      <view class="pic-list">
+        <view class="chart">
+          <image class="vm g10" mode="widthFix" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/dispic2.png"></image>
+        </view>
+        <view class="detail">
+          <view class="title">科学思维</view>
+          <view class="list-box">
+            <view class="list point">• 数学思维  • 编程思维  • 科学工程</view>
+            <view class="list">课程以 STEAM 理念为核心，与麻省理工大学世界教育实验室、中科院自动化所等权威学术机构深度合作，共同研发，培养孩子科学地、创造性地解决问题的能力。</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="pic-list">
+        <view class="chart">
+          <image class="vm g10" mode="widthFix" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/dispic3.png"></image>
+        </view>
+        <view class="detail">
+          <view class="title">英文思维</view>
+          <view class="list-box">
+            <view class="list point">·表达英文   ·思辨英文    ·科学英文</view>
+            <view class="list">采用纯正英文教材《Our World》 和《 Skill Sharpeners》等，营造类母语的学习环境，以语言学习为核心，培养地道英语思维。</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="info hide">
+    <view class="title b">科学的能力测评重新发现成长潜能</view>
+    <view class="article">
+       <text class="important">“学习能力测评体系”</text> 由《最强大脑》科学总顾问、麻省理工大学心理学博士刘嘉教授倾力打造。推出十余年，有效测评人数超过50万。依据脑科学、心理学研究，全方位测评孩子的综合能力水平。
+    </view>
+    <view class="article">
+      宣怀提供专业顾问1对1解读测评结果，帮助家长发现成长需求、发掘孩子天赋。
+    </view>
+    
+  </view>
+
+  <image class="vm g10 infobj hide" mode="widthFix" src="http://elite-league.oss-cn-shanghai.aliyuncs.com/mini/disbj2.jpg"></image>
+
+
+
+  <view class="school-box">
+    <view class="school-title tc">
+      <view class="title1">学习中心校区</view>
+      <view class="title2">教育成就未来</view>
+    </view>
+    <view class="school-list">
+      <view class="chart">
+        <image class="vm g10" mode="widthFix" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/school1.jpg"></image>
+      </view>
+      <view class="school-detail">
+        <view class="school-name">上海长宁八八中心</view>
+        <view class="school-address">
+          <view class="s1">地址：</view>
+          <view class="s2">上海市长宁区长宁路88号一层01室</view>
+        </view>
+        <view class="school-address">
+          <view class="s1">电话：</view>
+          <view class="s2">400 765 1616</view>
+        </view>
+      </view>
+    </view>
+    <view class="school-list">
+      <view class="chart">
+        <image class="vm g10" mode="widthFix" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/school2.jpg"></image>
+      </view>
+      <view class="school-detail">
+        <view class="school-name">武汉光谷中心</view>
+        <view class="school-address">
+          <view class="s1">地址：</view>
+          <view class="s2">湖北省武汉市洪山区关山一路特1号光谷软件园C6栋3楼</view>
+        </view>
+        <view class="school-address">
+          <view class="s1">电话：</view>
+          <view class="s2">400 765 1616</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="aboutus">
+    <view class="txt">
+      宣怀教育是一家致力于青少儿国际科学人才培养的教育机构。在21世纪核心素养教育理念指导下，宣怀教育构建了完整的国际科学教育课程体系，将青少儿培养成能够发现和解决新问题、开发新知识、创造新价值的未来卓越人才，使他们既能成功完成当前的升学目标，又能在未来的社会环境中脱颖而出。
+    </view>
+  </view>
+
+  <view class="coop">
+    <view class="coop-con clearfix">
+      <view class="coop-list fl">
+        <image src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/coop1.jpg" class="vm g10" mode="widthFix"></image>
+      </view>
+      <view class="coop-list fr">
+        <image src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/coop2.jpg" class="vm g10" mode="widthFix"></image>
+      </view>
+      <view class="coop-list fl">
+        <image src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/coop3.jpg" class="vm g10" mode="widthFix"></image>
+      </view>
+      <view class="coop-list fr">
+        <image src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/coop4.png" class="vm g10" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="pop" wx:if="{{popShow}}">
+  <view class="pop-con">
+    <view class="title tc">免费领取科学大礼包</view>
+    <image class="vm close-btn" bindtap="close" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/close.png"></image>
+    <view class="form">
+      <view class="input-box">
+        <input class="phoneNum" type="number" maxlength="11" bindinput="bindInput" data-item="phone" placeholder="输入手机号" 
+        value="{{user.phone}}"></input>
+      </view>
+      <view class="input-box">
+        <input class="phoneNum" type="number" maxlength="4" bindinput="bindInput" data-item="code" placeholder="输入验证码" 
+        value="{{user.code}}"></input>
+        <text class="getcode" bindtap="getcode" wx:if="{{!sendcode}}">获取验证码</text>
+        <view class="time" wx:if="{{sendcode}}">
+          <text class="num">{{nowtime}}</text> s
+        </view>
+      </view>
+    </view>
+    <view class="submitinfo" bindtap="getGift">免费领取</view>
+    <view class="tips">
+      <checkbox-group bindchange="change">
+        <checkbox class="agree" value="" ></checkbox>
+      </checkbox-group>
+      <navigator url="../../pages/agree/agree">
+      <text class="inner">我已经阅读并同意<text class="txt">《宣怀教育隐私政策》</text></text>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<view class="pop-info" wx:if="{{infoShow}}">
+  <view class="pop-con">
+      <view class="title tc">请填写孩子信息</view>
+      <image class="vm close-btn" bindtap="closeMore" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/close.png"></image>
+      <view class="form-box">
+        <view class="input-box clearfix">
+          <view class="label fl">孩子姓名</view>
+          <input class="student-name fl" bindinput="bindInput" data-item="name" placeholder="请输入孩子全名" value="{{user.name}}"></input>
+        </view>
+        <view class="input-box clearfix">
+          <view class="label fl">孩子年龄</view>
+          <input class="student-age fl" type="tel" bindinput="bindInput" data-item="age" placeholder="请输入孩子年龄" value="{{user.age}}"></input>
+        </view>
+        <!-- <view class="input-box clearfix hide">
+          
+          <picker bindchange="bindPickerChange" value="{{index1}}" range="{{ageGroup}}">
+            <view class="picker">
+              <view class="label fl">孩子年龄</view>
+              <text class="inner">{{ageGroup[index1]}}</text>
+            </view>
+          </picker>
+        </view> -->
+        <!-- <view class="input-box clearfix">
+          <view class="label fl">所在城市</view>
+          <picker bindchange="bindPickerChange" value="{{index2}}" range="{{cityGroup}}">
+            <view class="picker">
+              {{cityGroup[index2]}}
+            </view>
+          </picker>
+        </view> -->
+        <view class="sex-box clearfix">
+          <view class="label fl">孩子性别</view>
+          <view class="sex-group">
+            <view class="mail sex">
+              <image class="nromal vm g10" mode="widthFix"  wx:if="{{on!=='mail'}}" 
+              bindtap="choosemail" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/mail.png"></image>
+              <image class="chooseon vm g10" mode="widthFix" wx:if="{{on==='mail'}}" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/mailon.png"></image>
+            </view>
+            <view class="femail sex">
+              <image class="nromal vm g10" mode="widthFix" wx:if="{{on!=='femail'}}" 
+              bindtap="choosefemail" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/femail.png"></image>
+              <image class="chooseon vm g10" mode="widthFix" wx:if="{{on==='femail'}}" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/femailon.png"></image>
+            </view>
+          </view>
+        </view>
+
+
+
+      </view>
+      <view class="submit" bindtap="checkInfo">确认</view>
+
+    </view>
+
+</view>
+
+<view class="mask" wx:if="{{popShow}}"></view>
+
