@@ -1,0 +1,18 @@
+/* pages/child/child.wxss */
+.child {margin:0 50rpx;}
+.child-title {padding:10rpx 0;display:flex;justify-content: space-between;align-items: center;}
+.child-title .back {width: 50rpx;}
+.child-title .del {width: 50rpx;}
+.label {color:#333;font-size:32rpx;padding:20rpx 0;}
+.input {background:rgba(250,250,250,1);border:1px solid rgba(229,229,229,1);border-radius:36rpx;
+height:70rpx;line-height: 70rpx;font-size:32rpx;}
+.line {height:5px;background:rgba(250,250,250,1);}
+
+.input-list {margin-top:50rpx;}
+.sex-box {display:flex;justify-content: space-between;}
+.sex-list {background:rgba(250,250,250,1);border:1px solid rgba(229,229,229,1);height: 70rpx;
+line-height: 70rpx;border-radius:35rpx;text-align: center;width: 44%;position:relative;font-size:32rpx;
+color:#E6E6E6;}
+.sex-list image{width: 56rpx;height: 56rpx;position: absolute;
+top:8rpx;left:10rpx;}
+.sex-on {background: #F3BF36;color:#fff;}

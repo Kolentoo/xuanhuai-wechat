@@ -1,6 +1,9 @@
 {
   "pages": [
-    
+    "pages/child/child",
+    "pages/information/information",
+    "pages/prize/prize",
+    "pages/my/my",
     "pages/discount/discount",
     "pages/demo/demo",
     "pages/finish/finish",

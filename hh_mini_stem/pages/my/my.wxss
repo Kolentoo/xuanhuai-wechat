@@ -1,0 +1,15 @@
+/* pages/my/my.wxss */
+
+.my {padding:20rpx 0;}
+.my .title {color:#1B1C20;font-size:36rpx;font-weight: 800;}
+.avatar {width: 160rpx;height: 160rpx;border-radius:50%;margin:40rpx auto 0;overflow:hiddne;}
+.name {font-size:36rpx;color:#333;margin:15rpx 0;}
+.prize-box {display:flex;justify-content: center;align-items: center;color:#8D2006;font-size:36rpx;margin-top: 20rpx;}
+.prize-box image{width: 18rpx;margin-left: 30rpx;}
+
+.menu-box {padding:30rpx 0;border-top:1px solid rgba(238,238,238,1);margin:30px 50rpx 0;}
+.menu-list {display:flex;justify-content: space-between;align-items: center;padding:35rpx 0;}
+.menu-list .txt {margin-left:20rpx;}
+.menu-left {display: flex;align-items: center;}
+.menu-left image{width: 46rpx;}
+.menu-right image{width: 16rpx;}

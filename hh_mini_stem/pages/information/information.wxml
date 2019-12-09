@@ -1,0 +1,4 @@
+<!--pages/information/information.wxml-->
+<view class="information">
+  <view class="info-title b tc">个人信息</view>
+</view>

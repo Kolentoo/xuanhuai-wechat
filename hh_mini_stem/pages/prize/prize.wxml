@@ -1,0 +1,25 @@
+<!--pages/prize/prize.wxml-->
+<view class="prize-box">
+  <view class="title tc b">奖学金明细</view>
+  <view class="current-box tc">
+    <view class="current">当前奖学金</view>
+    <view class="num">{{prize}}</view>
+  </view>
+
+  <view class="record">
+    <view class="record-title">
+      <view class="shape"></view>
+      <view class="txt">奖学金记录</view>
+    </view>
+
+    <view class="content">
+      <view class="prize-list" wx:for="{{prizeGroup}}" wx:key="index">
+        <view class="prize-con">
+          <view class="prize-name">{{item.name}}</view>
+          <view class="prize-num">{{item.num}}</view>
+        </view>
+        <view class="prize-time">{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
