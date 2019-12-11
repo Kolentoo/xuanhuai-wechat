@@ -1,46 +1,33 @@
-// pages/child/child.js
+// pages/act/act.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sex:'boy',
-    date: '',
-    today:''
-  },
-
-  sexChange(e) {
-    console.log(e)
-    this.setData({
-      sex: e.currentTarget.id
-    })
-  },
-
-  bindDateChange(e){
-    console.log(e)
-  },
-
-  back(){
-    wx.navigateBack()
-  },
-  del(){
-
-  },
-  submitData(){
-
+    recordGroup:[
+      {
+        name:'宣怀圣诞节科学实验活动',
+        time:'2019/12/21',
+        status:1,
+      },
+      {
+        name: '宣怀圣诞节科学实验活动',
+        time: '2019/12/21',
+        status: 2,
+      },
+      {
+        name: '宣怀圣诞节科学实验活动',
+        time: '2019/12/21',
+        status: 3,
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var day = new Date();
-    day.setTime(day.getTime());
-    var nowDate = day.getFullYear() + "-" + (day.getMonth() + 1) + "-" + day.getDate();
-    this.setData({
-      today: nowDate
-    })
 
   },
 

@@ -1,0 +1,34 @@
+<!--pages/Invitate/Invitate.wxml-->
+<view class="invitate">
+  <view class="banner">
+    <image class="vm back" src="../../images/back.png" mode="widthFix"></image>
+    <text class="rule">规则</text>
+  </view>
+
+  <view class="create-pic tc">
+    <button class="btn-txt" open-type="getUserInfo" bindgetuserinfo='getUser'>生成我的专属海报</button>
+  </view>
+
+  <view class="friends">
+    <view class="title">我的邀请({{friends}})</view>
+    <view class="friend-list" wx:for="{{friendGroup}}" wx:key="{{index}}">
+      <view class="avatar">
+        <image class="vm g10" src="{{item.avatar}}" mode="widthFix"></image>
+      </view>
+      <view class="name">{{item.name}}</view>
+    </view>
+  </view>
+
+  <mp-loading></mp-loading>
+
+  <view class="pop" wx:if="{{share}}">
+    <view class="mask" bindtap="closePop"></view>
+    
+    <view class="box" bindtap="closePop">
+
+        <canvas class="pic" canvas-id='myCanvas' style='padding: 0;display:block;'></canvas>
+
+      <view class="save-btn" catchtap="saveImage">保存分享图</view>
+    </view>
+  </view>
+</view>

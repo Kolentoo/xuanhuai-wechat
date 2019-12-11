@@ -34,4 +34,8 @@
       </picker>
     </view>
   </view>
+
+  <view class="btn tc" bindtap="submitData">
+    <text class="tc">完成</text>
+  </view>
 </view>

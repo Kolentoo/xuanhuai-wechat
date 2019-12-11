@@ -1,7 +1,11 @@
 {
   "pages": [
-    "pages/child/child",
     "pages/information/information",
+    "pages/child/child",
+    "pages/Invitate/Invitate",
+    
+    
+    "pages/act/act",
     "pages/prize/prize",
     "pages/my/my",
     "pages/discount/discount",
@@ -13,8 +17,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "components/bottom/bottom",
-    "components/wx-index-list/wx-index-list"
-    
+    "components/wx-index-list/wx-index-list",
+    "components/loading/loading"
   ],
   "window": {
     "backgroundTextStyle": "light",

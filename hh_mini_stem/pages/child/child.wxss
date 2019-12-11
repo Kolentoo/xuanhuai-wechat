@@ -16,3 +16,9 @@ color:#E6E6E6;}
 .sex-list image{width: 56rpx;height: 56rpx;position: absolute;
 top:8rpx;left:10rpx;}
 .sex-on {background: #F3BF36;color:#fff;}
+
+
+/* .form-box {margin-bottom:100rpx;} */
+.btn {background: url('https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/btn.png') no-repeat center center;
+background-size:100%;height: 78rpx;line-height: 78rpx;text-align: cemter;color:#fff;position:fixed;bottom:10rpx;
+left:5%;z-index:5;width: 90%;}
