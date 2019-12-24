@@ -23,4 +23,5 @@
 .clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}
 .g10 {width:100%;}
 .h10 {height: 100%;}
+.opacity {opacity: 0;}
 

@@ -1,34 +1,59 @@
 <!--pages/Invitate/Invitate.wxml-->
-<view class="invitate">
+<view class="invitate {{draw?'all':''}}">
   <view class="banner">
-    <image class="vm back" src="../../images/back.png" mode="widthFix"></image>
-    <text class="rule">规则</text>
+    <image class="vm back opacity" src="../../images/back.png" mode="widthFix"></image>
+    <text class="rule" bindtap="goRules">规则</text>
   </view>
 
   <view class="create-pic tc">
-    <button class="btn-txt" open-type="getUserInfo" bindgetuserinfo='getUser'>生成我的专属海报</button>
+    <!-- <button class="btn-txt" open-type="getUserInfo" bindgetuserinfo='getUser'>生成我的专属海报</button> -->
+    <button class="btn-txt" bindtap="choosePic">生成我的专属海报</button>
   </view>
 
   <view class="friends">
-    <view class="title">我的邀请({{friends}})</view>
+    <view class="title">我的邀请({{total}})</view>
     <view class="friend-list" wx:for="{{friendGroup}}" wx:key="{{index}}">
       <view class="avatar">
-        <image class="vm g10" src="{{item.avatar}}" mode="widthFix"></image>
+        <image class="vm g10" src="{{item.sex==1?mailavatar:femailavatar}}" mode="widthFix"></image>
       </view>
-      <view class="name">{{item.name}}</view>
+      <view class="name">{{item.customer_id_name}}</view>
     </view>
   </view>
-
-  <mp-loading></mp-loading>
 
   <view class="pop" wx:if="{{share}}">
     <view class="mask" bindtap="closePop"></view>
     
-    <view class="box" bindtap="closePop">
+    <view class="box" >
 
-        <canvas class="pic" canvas-id='myCanvas' style='padding: 0;display:block;'></canvas>
+      <canvas class="pic" canvas-id='myCanvas' style='padding: 0;display:block;'></canvas>
 
-      <view class="save-btn" catchtap="saveImage">保存分享图</view>
+      <view class="btn-group">
+        <button class="save-btn" bindtap="closeShare">返回重新生成</button>
+        <button class="save-btn" catchtap="saveImage">保存到相册</button>
+      </view>
+      <image mode="widthFix" class="close2 vm" src="../../images/close2.png" bindtap="closeAll"></image>
     </view>
   </view>
+
+
+  <view class="pic-wrap" wx:if="{{choose}}">
+    <view class="mask" bindtap="closePicBox"></view>
+    <view class="pic-box">
+      <swiper indicator-dots="{{indicatorDots}}" linear previous-margin="80rpx" next-margin="80rpx" bindchange="changeCurrent"
+        autoplay="{{autoplay}}" circular="{{circular}}" current="{{current}}" interval="{{interval}}" linear duration="{{duration}}" indicator-dots>
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item class="item">
+            <image src="{{item}}" class="slide-image vm {{index==current?'current-item':''}}" mode="widthFix"/>
+            <!-- <image class="vm chooseon" mode="widthFix" wx:if="{{index==current}}" src="https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/chooseon.png"></image> -->
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="btn-group">
+      <button class="btn-txt" bindtap="closePicBox">取消</button>
+      <button class="btn-txt" bindtap="getUser">生成专属海报</button>
+    </view>
+  </view>
+
+  <view class="nodata tc" wx:if="{{finish}}">没有更多了</view>
 </view>

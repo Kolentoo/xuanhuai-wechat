@@ -3,7 +3,7 @@
   <view class="title tc b">奖学金明细</view>
   <view class="current-box tc">
     <view class="current">当前奖学金</view>
-    <view class="num">{{prize}}</view>
+    <view class="num">{{user.scholarship.amount}}</view>
   </view>
 
   <view class="record">
@@ -15,11 +15,13 @@
     <view class="content">
       <view class="prize-list" wx:for="{{prizeGroup}}" wx:key="index">
         <view class="prize-con">
-          <view class="prize-name">{{item.name}}</view>
-          <view class="prize-num">{{item.num}}</view>
+          <view class="prize-name">{{item.rule_name}}</view>
+          <view class="prize-num">{{item.flag==1?'+':'-'}} {{item.amount}}</view>
         </view>
-        <view class="prize-time">{{item.time}}</view>
+        <view class="prize-time">{{item.created_at}}</view>
       </view>
     </view>
   </view>
+
+  <view class="nodata tc" wx:if="{{finish||prizeGroup.length==0}}">没有更多了</view>
 </view>

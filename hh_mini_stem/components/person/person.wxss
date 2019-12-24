@@ -1,0 +1,7 @@
+
+.person-box {position:fixed;width: 230rpx;height: 80rpx;background: #9E1B1D;border-radius:40rpx 0 0 40rpx;z-index:999;
+bottom:15%;right: 0rpx;display:flex;justify-content: center;align-items: center;}
+button {padding:0;margin:0;}
+.person {width: 32rpx;}
+.person .icon {width: 100%;position:relative;top: 4rpx;}
+.person-txt {color:#fff;font-size:32rpx;margin-left: 10rpx;}

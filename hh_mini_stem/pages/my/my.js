@@ -5,17 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
+    defaultAvatar:'https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/default.png',
     user:{
-      avatar:'https://elite-league.oss-cn-shanghai.aliyuncs.com/mini/girl.png',
-      name:'Kol',
-      prize:'1000'
-    }
+      customer_avatar:'',
+      customer_name:'Kol',
+      scholarship:''
+    },
+    apiurl: 'https://app.hsuanhuai.com/',
+    accessToken:'',
+    customerId:''
+  },
+
+  goInvitate(){
+    wx.navigateTo({
+      url: "../Invitate/Invitate",
+    })
+  },
+  goAct(){
+    wx.navigateTo({
+      url: "../act/act",
+    })
+  },
+  goPrize(){
+    wx.navigateTo({
+      url: "../prize/prize",
+    })
+  },
+  editInfo(){
+    wx.navigateTo({
+      url: "../information/information",
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+
 
   },
 
@@ -30,7 +57,48 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let self = this
+    wx.getStorage({
+      key: 'accessToken',
+      success(res) {
+        self.setData({
+          accessToken: res.data
+        })
 
+        wx.getStorage({
+          key: 'customerId',
+          success(res) {
+            self.setData({
+              customerId: res.data
+            })
+            wx.request({
+              url: `${self.data.apiurl}api/v2/mini/customer/info`,
+              method: 'GET',
+              header: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'access-token': self.data.accessToken
+              },
+              data: {
+                customer_id: self.data.customerId
+              },
+              success: (res) => {
+                console.log(res)
+                self.setData({
+                  user: res.data.data
+                })
+
+              },
+              fail: (res) => {
+
+              }
+            })
+
+          }
+        })
+
+
+      }
+    })
   },
 
   /**

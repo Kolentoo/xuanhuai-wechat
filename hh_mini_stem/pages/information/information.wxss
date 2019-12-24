@@ -1,1 +1,46 @@
-/* pages/information/information.wxss */
+
+.opacity {opacity: 0 !important;}
+.information {margin:0 50rpx;}
+.info-title {padding:10rpx 0;display:flex;justify-content: space-between;align-items: center;}
+.info-title .back {width: 50rpx;}
+.info-title .save {font-weight: normal;}
+
+.avatar-box {position:relative;width:150rpx;height: 150rpx;margin:20rpx auto;}
+.avatar {width:150rpx;height: 150rpx;border-radius:50%;overflow: hidden;}
+.photo {width: 70rpx;height: 70rpx;position: absolute;right: -10rpx;bottom:-10rpx;}
+
+.form-box {padding:30rpx 0;}
+.input-box {border-top:1px solid rgba(240,243,244,1);display:flex;align-items: center;
+padding:36rpx 0;}
+.input-box .label {color:#333;font-size:32rpx;margin-right:40rpx;}
+.input-box .input {font-size:32rpx;color:#333;}
+.parent-name {position:relative;}
+.clear {width: 30rpx;height: 30rpx;position:absolute;top: 45rpx;right: 0;}
+
+.sex-group {display:flex;align-items: center;}
+.sex-list {margin-right:30rpx;}
+.sex-list image {width: 36rpx;height: 36rpx;}
+.sex-list .sex {margin-left: 10rpx;font-size:32rpx;}
+.sex-list .sex {color:#DBE1E4;}
+.on .sex {color:#333;}
+
+/* .child-box {padding:20rpx 0 0 0;} */
+.child-box .shape {width:5px;height:20px;background:rgba(243,191,54,1);}
+.child-title {display:flex;align-items: center;}
+.child-title .txt {font-size:28rpx;margin-left:25rpx;}
+.add {padding:36rpx 50rpx;display: flex;justify-content: space-between;align-items: center;}
+.add text {color:#C8D1D3;font-size:32rpx;}
+.add .arrow {width: 14rpx;margin-right: 10rpx;}
+
+.child-list {display:flex;align-items: center;justify-content: space-between;padding:36rpx 50rpx;}
+.child-list .name {width: 130rpx;display:inline-block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.child-list .detail {display:flex;align-items: center;}
+.child-list .t1 {font-size:32rpx;color:#333;margin-right:20rpx;}
+.child-list .edit {width: 46rpx;}
+
+
+.cropper-wrapper {position:fixed;top: 0;left: 0;width: 100%;height: 100vh;z-index:300;
+display:flex;justify-content: center;align-items: center;background-color: rgba(0, 0, 0, 1);}
+.btn-group {display:flex;justify-content: space-between;align-items: center;position:absolute;left: 0;
+bottom:0;width: 100%;z-index:300;}
+.btn-group text {color:#fff;font-size:32rpx;padding:30rpx;}

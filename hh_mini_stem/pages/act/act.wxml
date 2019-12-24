@@ -1,7 +1,7 @@
 <!--pages/act/act.wxml-->
 <view class="act">
   <view class="act-title">
-    <image class="vm back" bindtap="back" src="../../images/back.png" mode="widthFix"></image>
+    <image class="vm back opacity" bindtap="back" src="../../images/back.png" mode="widthFix"></image>
     <text class="title">我的活动</text>
     <image class="vm del" src="../../images/del.png" mode="widthFix"></image>
   </view>
@@ -9,24 +9,26 @@
   <view class="record">
     <view class="record-title">
       <view class="shape"></view>
-      <view class="txt">预约记录</view>
+      <view class="record-txt">预约记录</view>
     </view>
 
     <view class="record-body">
       <view class="record-list" wx:for="{{recordGroup}}" wx:key="index">
         <view class="main">
-          <view class="name">活动名称：{{item.name}}</view>
-          <view class="time">到访时间：{{item.time}}</view>
+          <view class="name">活动名称：{{item.activity_name}}</view>
+          <view class="time">到访时间：{{item.promise_visit_time===null?'':item.promise_visit_time}}</view>
         </view>
         <view class="status">
-          <image wx:if="{{item.status==1}}" class="vm " src="../../images/canceled.png" mode="widthFix"></image>
-          <image wx:if="{{item.status==2}}" class="vm " src="../../images/called.png" mode="widthFix"></image>
-          <image wx:if="{{item.status==3}}" class="vm " src="../../images/success.png" mode="widthFix"></image>
-          <view wx:if="{{item.status==1}}" class="txt canceled">已取消</view>
-          <view wx:if="{{item.status==2}}" class="txt called">已预约</view>
-          <view wx:if="{{item.status==3}}" class="txt success">已到访</view>
+          <image wx:if="{{item.visited_status==3}}" class="vm " src="../../images/canceled.png" mode="widthFix"></image>
+          <image wx:if="{{item.visited_status==0}}" class="vm " src="../../images/called.png" mode="widthFix"></image>
+          <image wx:if="{{item.visited_status==1}}" class="vm " src="../../images/success.png" mode="widthFix"></image>
+          <view wx:if="{{item.visited_status==3}}" class="txt canceled">已取消</view>
+          <view wx:if="{{item.visited_status==0}}" class="txt called">已预约</view>
+          <view wx:if="{{item.visited_status==1}}" class="txt success">已到访</view>
         </view>
       </view>
     </view>
   </view>
+
+  <view class="nodata tc" wx:if="{{finish||recordGroup.length==0}}">没有更多了</view>
 </view>

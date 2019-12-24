@@ -74,14 +74,14 @@ Component({
     resetRight(data) {
       let rightArr = []
       if (this.data.myCity) {
-        this.data.data.unshift({
-          title: '我的定位',
-          type: 'me',
-          item: [{
-            name: '点击获取我的位置',
-            key: '我的定位'
-          }]
-        })
+        // this.data.data.unshift({
+        //   title: '我的定位',
+        //   type: 'me',
+        //   item: [{
+        //     name: '点击获取我的位置',
+        //     key: '我的定位'
+        //   }]
+        // })
       }
       for (let i in data) {
         rightArr.push(data[i].title.substr(0, 1));

@@ -5,25 +5,99 @@ Page({
    * 页面的初始数据
    */
   data: {
+    user:'',
+    apiurl: 'https://app.hsuanhuai.com/',
     prize:1000,
-    prizeGroup:[
-      {
-        name:'邀请奖励',
-        time:'2019.11.24 15:22:22',
-        num:'+1000'
+    prizeGroup:[],
+    currentPage:1,
+    customerId:'',
+    finish:false,
+  },
+
+  getPrizeList(page){
+    let self = this
+    wx.request({
+      url: self.data.apiurl + 'api/v2/mini/scholarship/list',
+      data: {
+        customer_id: self.data.customerId,
+        page: page,
+        limit: 15
       },
-      {
-        name: '邀请奖励',
-        time: '2019.11.24 15:22:22',
-        num: '+10000'
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data)
+        if (res.data.code == '0') {
+          if (res.data.data.list.length<15){
+            self.setData({
+              prizeGroup: self.data.prizeGroup.concat(res.data.data.list),
+              finish:true
+            })
+          }else{
+            self.setData({
+              prizeGroup: self.data.prizeGroup.concat(res.data.data.list),
+              currentPage: self.data.currentPage + 1,
+              finish: false
+            })
+          }
+
+        }
+
       }
-    ]
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let self = this
+
+    wx.getStorage({
+      key: 'accessToken',
+      success(res) {
+        self.setData({
+          accessToken: res.data
+        })
+
+        wx.getStorage({
+          key: 'customerId',
+          success(res) {
+            self.setData({
+              customerId: res.data
+            })
+
+            self.getPrizeList(self.data.currentPage)
+
+            wx.request({
+              url: `${self.data.apiurl}api/v2/mini/customer/info`,
+              method: 'GET',
+              header: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'access-token': self.data.accessToken
+              },
+              data: {
+                customer_id: self.data.customerId
+              },
+              success: (res) => {
+                console.log(res)
+                self.setData({
+                  user: res.data.data
+                })
+
+              },
+              fail: (res) => {
+
+              }
+            })
+
+          }
+        })
+
+
+      }
+    })
 
   },
 
@@ -74,5 +148,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  onReachBottom: function () { //触底开始下一页
+    if(!this.data.finish){
+      this.getPrizeList(this.data.currentPage)
+    }
+    
+  },
 })

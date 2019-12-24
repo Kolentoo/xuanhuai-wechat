@@ -1,0 +1,21 @@
+<!--components/person/person.wxml-->
+
+<view class="person-wrap">
+
+  <button class="person-box" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{hasPhone.length==0}}">
+      <view class="person">
+        <image src="../../images/person.png" class="vm icon g10" mode="widthFix"></image>
+      </view>
+      <view  class="person-txt">个人中心</view>
+  </button>
+
+  <navigator url="../../pages/my/my" class="block">
+    <view class="person-box" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{hasPhone.length>0}}">
+      <view class="person">
+        <image src="../../images/person.png" class="vm icon g10" mode="widthFix"></image>
+      </view>
+      <view  class="person-txt">个人中心</view>
+    </view>
+  </navigator>
+
+</view>

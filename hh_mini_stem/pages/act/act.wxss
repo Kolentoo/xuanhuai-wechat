@@ -7,7 +7,7 @@
 .record {padding:40rpx 0 0 0;border-top:1px solid rgba(240,243,244,1);margin: 40rpx 40rpx 0;}
 .record-title {display:flex;align-items: center;margin-bottom:40rpx;}
 .record-title .shape {width: 2rpx;height: 32rpx;background:rgba(141,32,6,1);border:1px solid rgba(112,112,112,1);}
-.record-title .txt {color:#8D2006;font-size:32rpx;margin-left: 5rpx;}
+.record-title .record-txt {color:#8D2006;font-size:32rpx;margin-left: 10rpx;}
 
 .record-list {display:flex;justify-content: space-between;padding:20rpx 0;align-items: center;
 border-bottom:1px solid rgba(240,243,244,1);}
@@ -19,3 +19,5 @@ border-bottom:1px solid rgba(240,243,244,1);}
 .canceled {font-size:24rpx;color:##E63331;}
 .called {font-size:24rpx;color:#96ADA4;}
 .success {font-size:24rpx;color:#F3C135;}
+
+.nodata {padding:50rpx;font-size:24rpx;color:#CFCFCF;}

@@ -47,6 +47,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 1,
 			"list": [
@@ -62,6 +66,20 @@
 					"name": "test",
 					"pathName": "pages/discount/discount",
 					"query": "account_id=1&ad_id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/discount/discount",
+					"pathName": "pages/discount/discount",
+					"query": "scene=12&id=110",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/discount/discount",
+					"pathName": "pages/discount/discount",
+					"query": "scene=28740",
 					"scene": null
 				}
 			]

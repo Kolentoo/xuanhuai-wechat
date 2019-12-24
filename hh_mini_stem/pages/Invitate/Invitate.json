@@ -1,6 +1,6 @@
 {
     "usingComponents": {
-      "mp-loading": "../components/loading/loading"
+
     },
-    "navigationBarTitleText": "UI组件库"
+    "navigationBarTitleText": "邀请好友"
 }

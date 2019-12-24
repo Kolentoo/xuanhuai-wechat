@@ -1,5 +1,5 @@
 // pages/demo/demo.js
-let City = require('../../utils/allcity.js');
+// let City = require('../../utils/allcity.js');
 
 Page({
 
@@ -11,23 +11,67 @@ Page({
       search: true, // 是否开启搜索
       searchHeight: 45, // 搜索条高度
       suctionTop: true // 是否开启标题吸顶
-    }
+    },
+    apiurl: 'https://app.hsuanhuai.com/',
+  },
+  getCityList() {
+    wx.request({
+      url: `${this.data.apiurl}api/v2/mini/cityList`,
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'access-token': this.data.accessToken
+      },
+      data: {},
+      success: (res) => {
+        console.log(res.data)
+        if (res.data.code === '0') {
+          this.setData({
+            city:res.data.data
+          })
+        }
+      },
+      fail: (res) => {
+
+      }
+    })
   },
   onLoad() {
-    // wx.showLoading({
-    //   title: '加载数据中...',
-    // })
-    // // 模拟服务器请求异步加载数据
-    // setTimeout(()=>{
-    this.setData({
-      city: City
+    wx.showLoading({
+      title: '加载数据中...',
     })
-    //   wx.hideLoading()
-    // },2000)
+    // 模拟服务器请求异步加载数据
+    let self = this
+    setTimeout(()=>{
+    self.getCityList()
+    // this.setData({
+    //   city: City
+    // })
+      wx.hideLoading()
+    },2000)
 
   },
   bindtap(e) {
     console.log(e.detail)
+    wx.setStorage({
+      key: "name",
+      data: e.detail.name,
+      success:()=>{
+        wx.setStorage({
+          key: "value",
+          data: e.detail.value,
+          success: () => {
+            wx.navigateBack()
+          }
+
+        })
+      }
+
+    })
+    
+    // wx.navigateTo({
+    //   url: `../information/information?name=${e.detail.name}&value=${e.detail.value}`,
+    // })
   },
 
 })

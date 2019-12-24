@@ -1,16 +1,21 @@
 {
   "pages": [
+    "pages/discount/discount",
     "pages/information/information",
-    "pages/child/child",
+    
     "pages/Invitate/Invitate",
     
     
+    "pages/demo/demo",
+    "pages/my/my",
     "pages/act/act",
     "pages/prize/prize",
-    "pages/my/my",
-    "pages/discount/discount",
-    "pages/demo/demo",
+    
+    
+    "pages/rules/rules",
     "pages/finish/finish",
+    "pages/child/child",
+    
     "pages/agree/agree",
     "pages/home/home",
     "pages/success/success",
@@ -19,6 +24,7 @@
     "components/bottom/bottom",
     "components/wx-index-list/wx-index-list",
     "components/loading/loading"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

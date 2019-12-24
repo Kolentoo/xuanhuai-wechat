@@ -2,7 +2,8 @@
 
 .my {padding:20rpx 0;}
 .my .title {color:#1B1C20;font-size:36rpx;font-weight: 800;}
-.avatar {width: 160rpx;height: 160rpx;border-radius:50%;margin:40rpx auto 0;overflow:hiddne;}
+.avatar {width: 160rpx;height: 160rpx;border-radius:50%;margin:40rpx auto 0;overflow:hidden;}
+.avatar image {border-radius:50%;width: 160rpx;display:block;height: 160rpx !important;}
 .name {font-size:36rpx;color:#333;margin:15rpx 0;}
 .prize-box {display:flex;justify-content: center;align-items: center;color:#8D2006;font-size:36rpx;margin-top: 20rpx;}
 .prize-box image{width: 18rpx;margin-left: 30rpx;}

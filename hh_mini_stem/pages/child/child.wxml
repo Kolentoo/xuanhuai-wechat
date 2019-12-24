@@ -1,7 +1,7 @@
 <!--pages/child/child.wxml-->
 <view class="child">
   <view class="child-title tc b">
-    <image class="vm back" bindtap="back" src="../../images/back.png" mode="widthFix"></image>
+    <image class="vm back opacity" bindtap="back" src="../../images/back.png" mode="widthFix"></image>
     <text class="title">编辑资料</text>
     <image class="vm del" bindtap="del" src="../../images/del.png" mode="widthFix"></image>
   </view>
@@ -10,16 +10,17 @@
   <view class="form-box">
     <view class="input-list tc">
       <view class="label">孩子姓名</view>
-      <input class="child-name input" placeholder="请输入孩子姓名"></input>
+      <input class="child-name input" data-item="student_name" bindinput="bindInput"
+      placeholder="请输入孩子姓名" value="{{childData.student_name}}"></input>
     </view>
     <view class="input-list tc">
       <view class="label">孩子性别</view>
       <view class="sex-box">
-        <view id="boy" class="['sex-list',{{sex==='boy'?'sex-on':''}}]" bindtap="sexChange">
+        <view id="1" class="['sex-list',{{childData.sex==1?'sex-on':''}}]" bindtap="sexChange">
           <image class="vm" mode="widthFix" src="../../images/boy.png"></image>
           男孩
         </view>
-        <view id="girl" class="['sex-list',{{sex==='girl'?'sex-on':''}}]" bindtap="sexChange">
+        <view id="2" class="['sex-list',{{childData.sex==2?'sex-on':''}}]" bindtap="sexChange">
           <image class="vm" mode="widthFix" src="../../images/girl.png"></image>
           女孩
         </view>
@@ -27,9 +28,9 @@
     </view>
     <view class="input-list tc">
       <view class="label">孩子生日</view>
-      <picker mode="date" value="{{today}}" end="{{today}}" bindchange="bindDateChange" class="input">
+      <picker mode="date" value="{{childData.birthday}}" end="{{childData.birthday}}" bindchange="bindDateChange" class="input">
         <view class="picker">
-          {{today}}
+          {{childData.birthday}}
         </view>
       </picker>
     </view>

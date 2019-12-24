@@ -49,6 +49,8 @@ Page({
     on:'mail',
     fixed:false,
     childCheck:false,
+    getPhone:false,
+    sceneId:''
 
   },
 
@@ -78,6 +80,11 @@ Page({
               this.setData({
                 phone: res.data.data.phoneNumber
               })
+              wx.setStorage({
+                key: "phoneNum",
+                data: res.data.data.phoneNumber,
+
+              })
               console.log(res.data.data.phoneNumber)
 
               wx.request({
@@ -92,7 +99,8 @@ Page({
                   oauth_id: this.data.localInfo.oauth_id,
                   activity_id: '13',
                   account_id_src: this.data.shareid?this.data.shareid:'',
-                  ad_id: this.data.adid?this.data.adid:'1'
+                  ad_id: this.data.adid?this.data.adid:'1',
+                  qr_code_id: this.data.sceneId
                 },
                 success: (res) => {
                   console.log(res.data)
@@ -173,10 +181,8 @@ Page({
   },
 
   getcode(){
-
     this.checkPhone()
     if(this.data.check){
-
       wx.request({
         url: `${this.data.apiurl}api/v1/meta/sms`,
         method: 'POST',
@@ -302,7 +308,8 @@ Page({
         activity_id: '13',
         account_id_src: this.data.shareid ? this.data.shareid : '',
         sms_code: this.data.user.code,
-        ad_id: this.data.adid?this.data.adid:'1'
+        ad_id: this.data.adid?this.data.adid:'1',
+        qr_code_id: this.data.sceneId
       },
       success: (res) => {
         if (res.data.code === '0') {
@@ -371,6 +378,7 @@ Page({
       })
     }
   },
+
   submitInfo(){
     console.log(this.data.token)
     if(this.data.childCheck){
@@ -434,6 +442,7 @@ Page({
       popShow: false
     })
   },
+
   openMore(){
     this.setData({
       infoShow: true
@@ -447,13 +456,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    if (options.scene){
+      console.log(options.scene)
+      this.setData({
+        sceneId: options.scene
+      })
+    }
+
+
     let self = this
+    wx.getStorage({
+      key: 'phoneNum',
+      success(res) {
+        console.log(res.data)
+        self.setData({
+          phone: res.data,
+          getPhone: true
+        })
+
+
+      }
+    })
+
+    
     wx.login({
       success(res) {
         console.log(res, 'res')
         if (res.code) {
           //发起网络请求
+
+
           
           wx.request({
             url: `${self.data.apiurl}api/v1/mini/auth/authenticate`,
@@ -476,6 +508,15 @@ Page({
                   key: "sessionKey",
                   data: res.data.data.session_key
                 })
+                wx.setStorage({
+                  key: "accessToken",
+                  data: res.data.data.account_info.access_token
+                })
+                wx.setStorage({
+                  key: "customerId",
+                  data: res.data.data.account_info.customerInfo.customer_id
+                })
+
               } else {
 
               }
@@ -541,20 +582,20 @@ Page({
       }
     })
 
-    if (options.account_id){
-      self.setData({
-        shareid: options.account_id
-      })
-    }
+    // if (options.account_id){
+    //   self.setData({
+    //     shareid: options.account_id
+    //   })
+    // }
 
-    if (options.ad_id) {
-      self.setData({
-        adid: options.ad_id
-      })
-    }
+    // if (options.ad_id) {
+    //   self.setData({
+    //     adid: options.ad_id
+    //   })
+    // }
 
-    console.log('shareid:'+this.data.shareid)
-    console.log('adid:' + this.data.adid)
+    // console.log('shareid:'+this.data.shareid)
+    // console.log('adid:' + this.data.adid)
 
   },
 
@@ -570,7 +611,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let self = this
+    wx.getStorage({
+      key: 'phoneNum',
+      success(res) {
+        console.log(res.data)
+        self.setData({
+          phone: res.data,
+          getPhone: true
+        })
 
+
+      }
+    })
   },
 
   /**

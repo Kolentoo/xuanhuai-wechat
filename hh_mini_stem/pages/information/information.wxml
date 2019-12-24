@@ -1,4 +1,94 @@
 <!--pages/information/information.wxml-->
+
+<import src="../../utils/we-cropper.wxml"/>
+
 <view class="information">
-  <view class="info-title b tc">个人信息</view>
+  <view class="info-title tc b">
+    <image class="vm back opacity" bindtap="back" src="../../images/back.png" mode="widthFix"></image>
+    <text class="title">编辑资料</text>
+    <text class="save" bindtap="checkData">保存</text>
+  </view>
+
+  <view class="avatar-box">
+    <view class="avatar" bindtap="uploadTap">
+      <image class="vm g10" src="{{user.customer_avatar?user.customer_avatar:defaultAvatar}}" 
+      mode="widthFix"></image>
+    </view>
+    <image class="vm photo" mode="widthFix" src="../../images/photo.png" bindtap="uploadTap"></image>
+  </view>
+
+  <view class="form-box">
+    <view class="input-box parent-name">
+      <view class="label">家长姓名</view>
+      <input class="input name" placeholder="请输入家长姓名" data-item="customer_name" bindinput="bindInput" value="{{user.customer_name}}"></input>
+      <image class="vm clear" mode="widthFix" src="../../images/clear.png" bindtap="clear"></image>
+    </view>
+    <view class="input-box">
+      <view class="label">家长性别</view>
+
+      <view class="sex-group">
+        <view class="sex-list {{user.sex==1?'on':''}}" id="mail" bindtap="changeSex">
+          <image class="vm chooseon" src="../../images/chooseon.png" wx:if="{{user.sex==1}}"></image>
+          <image class="vm choose" src="../../images/choose.png" wx:if="{{user.sex!==1}}"></image>
+          <text class="sex mail">男</text>
+        </view>
+        <view class="sex-list {{user.sex==2?'on':''}}" id="femail" bindtap="changeSex">
+          <image class="vm chooseon" src="../../images/chooseon.png" wx:if="{{user.sex==2}}"></image>
+          <image class="vm choose" src="../../images/choose.png" wx:if="{{user.sex!==2}}"></image>
+          <text class="sex femail">女</text>
+        </view>
+      </view>
+    </view>
+    <view class="input-box city-name">
+      <view class="label">所在城市</view>
+      <input class="input name" placeholder="请选择所在城市" bindtap="chooseCity" value="{{user.region_name}}"></input>
+    </view>
+  </view>
+
+  <view class="cropper-wrapper" wx:if="{{upload}}">
+    <template is="we-cropper" data="{{...cropperOpt}}"/>
+    <view class="btn-group">
+      <text class="cancel" bindtap="cencel">取消</text>
+      <text class="sure" bindtap="getCropperImage">确定</text>
+    </view>
+  </view>
+
+
 </view>
+
+
+
+<view class="child-box">
+  <view class="child-title">
+    <view class="shape"></view>
+    <text class="txt">孩子信息</text>
+  </view>
+  <view class="child-group">
+    <view class="child-list" wx:for="{{childGroup}}" wx:key="{{index}}">
+      <view class="detail">
+        <text class="t1 name">{{item.student_name}}</text>
+        <text class="t1">{{item.sex==1?'男':'女'}}</text>
+        <text class="t1">{{item.birthday===null?'':item.birthday}}</text>
+      </view>
+      <image src="../../images/setting.png" class="vm edit" mode="widthFix" bindtap="editStudent" 
+      data-sid="{{item.student_id}}"></image>
+    </view>
+  </view>
+  <view class="add" bindtap="addChild">
+    <text>添加孩子信息</text>
+    <image class="vm arrow" mode="widthFix" src="../../images/arrow.png"></image>
+  </view>
+</view>
+
+
+<!-- <view class="upload">
+  <input value="random_name">上传文件名字是随机文件名</input>
+  <input type="text" id="dirname" placeholder="如果不填，默认是上传到根目录" size="50"></input>
+</view>
+
+
+<view id="container">
+	<a id="selectfiles" href="javascript:void(0);" class='btn'>选择文件</a>
+	<a id="postfiles" href="javascript:void(0);" class='btn'>开始上传</a>
+</view> -->
+

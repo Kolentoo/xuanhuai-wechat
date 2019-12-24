@@ -235,3 +235,6 @@
 
 <view class="mask" wx:if="{{popShow}}"></view>
 
+
+<person hasPhone="{{phone}}" ></person>
+

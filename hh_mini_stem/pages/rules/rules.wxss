@@ -1,0 +1,6 @@
+/* pages/rules/rules.wxss */
+
+.rule-box {padding:30rpx;}
+.rule-title {color:#1B1C20;font-size:40rpx;font-weight:800;}
+.head {color:#1B1C20;font-size:32rpx;margin-top:50rpx;}
+.txt {font-size:24rpx;color:#333;margin-top:15rpx;}
