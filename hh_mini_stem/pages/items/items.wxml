@@ -1,0 +1,40 @@
+<view class="data-monitoring">
+  <view class="data-group">
+    <view class="group-list" wx:for="{{allData}}" wx:key="index">
+      <view class="title b">{{item.name}}</view>
+       <navigator url="/pages/itemdetail/itemdetail?id=xxx" hover-class="none">
+        <view class="data-list" wx:for="{{item.team}}" wx:key="idx" wx:for-item="itemName" >
+          <view class="main">
+            <view class="main-inner">
+              <view class="group-name b">{{itemName.groupName}} <text class="mumber">（{{itemName.member}}人）</text></view>
+              <view class="precent">总成功率：{{itemName.totalSuccessPrecent}}</view>
+            </view>
+            <view class="other-data">
+              <view class="data">
+                <view class="val">{{itemName.Outbound}}</view>
+                <view class="name">外呼量</view>
+              </view>
+              <view class="data">
+                <view class="val">{{itemName.connect}}</view>
+                <view class="name">接通量</view>
+              </view>
+              <view class="data">
+                <view class="val">{{itemName.connectPrecent}}</view>
+                <view class="name">接通率</view>
+              </view>
+              <view class="data">
+                <view class="val">{{itemName.success}}</view>
+                <view class="name">成功量</view>
+              </view>
+              <view class="data">
+                <view class="val">{{itemName.successPrecent}}</view>
+                <view class="name">成功率</view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

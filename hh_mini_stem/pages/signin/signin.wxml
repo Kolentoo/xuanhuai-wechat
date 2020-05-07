@@ -1,0 +1,15 @@
+<view class="signin-box">
+  <view class="signin">
+    <view class="input-box g10">
+      <input class="phone input" bindinput="phoneValue" type="number" value="{{phone}}" maxlength="11" placeholder-style="color:#e4e4e4" placeholder="请输入手机号"></input>
+    </view>
+    <view class="input-box g10">
+      <input class="code input" bindinput="codeValue" type="number" value="{{code}}" maxlength="6" placeholder-style="color:#e4e4e4" placeholder="请输入验证码"></input>
+      <view class="send-box">
+        <text class="send-code send-inner" wx:if="{{!send}}" bindtap="sendCode">发送验证码</text>
+        <text class="seconds send-inner" wx:if="{{send}}">{{time}} <text>s</text></text>
+      </view>
+    </view>
+    <view class="send-btn {{phone.length==11&&code.length==6?'ok':''}}" bindtap="signin">登录</view>
+  </view>
+</view>

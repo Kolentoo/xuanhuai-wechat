@@ -24,4 +24,5 @@
 .g10 {width:100%;}
 .h10 {height: 100%;}
 .opacity {opacity: 0;}
+.gary {color:rgb(153,153,153);}
 

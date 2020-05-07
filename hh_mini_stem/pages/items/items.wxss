@@ -1,0 +1,14 @@
+/* pages/items/items.wxss */
+.data-group {padding:20rpx;}
+.data-list {outline: none;}
+.group-list {margin-bottom:30rpx;}
+.title {font-size:32rpx;margin-bottom:10px;}
+.group-name {font-size:28rpx;}
+.group-name .mumber {font-weight: normal;font-size:26rpx;color:rgb(153,153,153);}
+.precent {font-size:22rpx;color:rgb(153,153,153);}
+.main {background: rgba(243,243,243);padding:20rpx;margin-bottom:20rpx;}
+.main-inner {display:flex;justify-content: space-between;align-items: center;}
+.other-data {display:flex;justify-content: space-between;align-items: center;margin-top:20rpx;}
+.other-data .data {text-align: center;}
+.other-data .data .val {font-size:28rpx;}
+.other-data .data .name {font-size:22rpx;color:rgb(153,153,153);}

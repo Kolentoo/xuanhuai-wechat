@@ -1,24 +1,23 @@
 {
   "pages": [
+    "pages/signin/signin",
+    "pages/items/items",
+    "pages/itemdetail/itemdetail",
+    
+    
+    
+    "pages/login/login",
     "pages/discount/discount",
     "pages/information/information",
-    
     "pages/Invitate/Invitate",
-    
-    
     "pages/demo/demo",
     "pages/my/my",
     "pages/act/act",
     "pages/prize/prize",
-    
-    
-    "pages/rules/rules",
     "pages/finish/finish",
     "pages/child/child",
-    
     "pages/agree/agree",
     "pages/home/home",
-    "pages/success/success",
     "pages/index/index",
     "pages/logs/logs",
     "components/bottom/bottom",

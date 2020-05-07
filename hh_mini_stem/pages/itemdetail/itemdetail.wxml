@@ -1,0 +1,38 @@
+
+<view class="detail-box">
+  <view class="title b">{{groupData.product}}</view>
+  <view class="group-info">
+    <view class="team">
+      <text class="group">{{groupData.groupName}} </text>
+      <text class="member">（{{groupData.member}}）人</text>
+    </view>
+    <view class="staff main" wx:for="{{groupData.staff}}" wx:key="index">
+      <view class="main-inner">
+        <view class="group-name b">{{item.id}} <text class="staff-name">（{{item.name}}）</text></view>
+        <view class="precent"></view>
+      </view>
+      <view class="other-data">
+        <view class="data">
+          <view class="val">{{item.Outbound}}</view>
+          <view class="name">外呼量</view>
+        </view>
+        <view class="data">
+          <view class="val">{{item.connect}}</view>
+          <view class="name">接通量</view>
+        </view>
+        <view class="data">
+          <view class="val">{{item.success}}</view>
+          <view class="name">成功量</view>
+        </view>
+        <view class="data">
+          <view class="val">{{item.successPrecent}}</view>
+          <view class="name">成功率</view>
+        </view>
+        <view class="data">
+          <view class="val">{{item.time}}</view>
+          <view class="name">接通时长</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

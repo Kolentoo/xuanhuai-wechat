@@ -1,0 +1,15 @@
+.detail-box {padding:20rpx;}
+.title {font-size:32rpx;margin-bottom:5px;}
+.group {font-size:28rpx;font-weight:bold;}
+.member {font-size:26rpx;color:rgb(153,153,153);}
+.staff-name {font-weight: normal;font-size:26rpx;color:rgb(153,153,153);}
+.team {margin-bottom:30rpx;}
+
+.group-name {font-size:28rpx;line-height: ;}
+.precent {font-size:26rpx;}
+.main {background: rgba(243,243,243);padding:20rpx;margin-bottom:20rpx;}
+.main-inner {display:flex;justify-content: space-between;align-items: center;}
+.other-data {display:flex;justify-content: space-between;align-items: center;margin-top:20rpx;}
+.other-data .data {text-align: center;}
+.other-data .data .val {font-size:28rpx;}
+.other-data .data .name {font-size:22rpx;color:rgb(153,153,153);}

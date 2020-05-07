@@ -1,0 +1,10 @@
+/* pages/signin/signin.wxss */
+.signin {width: 76%;margin:30% auto 0;}
+.input-box {position:relative;margin-bottom:10rpx;}
+.input {border-bottom:1rpx solid #e4e4e4;line-height: 100rpx;height: 100rpx;width: 100%;color:#333;font-size: 30rpx;}
+.send-box {position:absolute;bottom:0;right: 0;z-index:100;}
+.send-inner {color:#e4e4e4;line-height: 100rpx;font-size: 28rpx;}
+.send-code {color:#333;}
+.send-btn {width: 100%;margin:100rpx auto 0;border-radius:80rpx;text-align: center;height: 90rpx;line-height: 90rpx;color:#fff;
+background:#e4e4e4;}
+.ok {background: rgba(234,65,72);}
